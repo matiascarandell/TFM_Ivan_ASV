@@ -27,6 +27,7 @@ Vegeu [el context inicial del TFM](docs/context-projecte.md) per a les fonts, l'
 - 2026-11-25 — Codi a Git/GitHub, fitxers grans a Drive — el repositori es manté lleuger.
 - 2026-11-25 — Partir del n3m0 i millorar-lo per iteracions — disposar d'un disseny de referència documentat per comparar-hi els canvis del TFM.
 - 2026-11-25 — Provar la primera secció de proa en PETG abans d'imprimir la resta del casc — comprovar la qualitat de les parets i l'estanquitat amb el [perfil inicial de Bambu Studio](docs/context-projecte.md#primera-impressió-de-la-proa-amb-petg).
+- 2026-11-25 — Casc en PETG amb paret massissa (6 bucles, Arachne), sense suports, a la P1S — la paret de l'STL fa ~2,4 mm i ha de ser estanca. Ajustos i projecte `.3mf` a [la primera impressió de la proa](docs/context-projecte.md#primera-impressió-de-la-proa-amb-petg).
 
 ## Hardware
 
