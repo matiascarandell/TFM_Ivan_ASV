@@ -10,6 +10,7 @@
 # Secrets
 secrets.h
 .env
+github-recovery-codes.txt
 
 # Claude Code (configuració local)
 .claude/settings.local.json

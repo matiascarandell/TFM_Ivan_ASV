@@ -6,7 +6,11 @@ Context compartit per a tots els assistents d'IA del projecte (Claude Code, Code
 ## Projecte
 
 Vaixell de superfície autònom (ASV) imprès en 3D, controlat per un ESP32.
-TFM de l'Ivan Peña, codirigit amb en Matias Carandell (UPC).
+TFM de l'Ivan Peña, estudiant del màster MUENO a la Facultat de Nàutica de Barcelona (UPC), codirigit amb en Matias Carandell.
+
+El punt de partida és el casc imprimible del n3m0 de Mike Holden. L'esquema preliminar planteja una primera versió amb pilotatge manual per Wi-Fi des del mòbil i control del motor i del timó amb un ESP32. L'objectiu del TFM és evolucionar el prototip cap a la navegació autònoma.
+
+Vegeu [el context inicial del TFM](docs/context-projecte.md) per a les fonts, l'inventari de peces, les hipòtesis del muntatge i les comprovacions pendents. L'Ivan treballa amb Codex i en Matias amb Claude Code, que carrega aquest fitxer des de `CLAUDE.md`.
 
 ## Estructura del repositori
 
@@ -21,10 +25,11 @@ TFM de l'Ivan Peña, codirigit amb en Matias Carandell (UPC).
 
 <!-- Format: data — decisió — motiu -->
 - 2026-11-25 — Codi a Git/GitHub, fitxers grans a Drive — el repositori es manté lleuger.
+- 2026-11-25 — Partir del n3m0 i millorar-lo per iteracions — disposar d'un disseny de referència documentat per comparar-hi els canvis del TFM.
 
 ## Hardware
 
-- Microcontrolador: ESP32 (model per concretar)
+- Microcontrolador: ESP32 (la llista de compres apunta a una placa ESP-WROOM-32 de 38 pins amb CP2102 i USB-C, pendent de confirmar).
 - Assignació de pins: vegeu `hardware/pinout.md` (per crear)
 
 ## Convencions
