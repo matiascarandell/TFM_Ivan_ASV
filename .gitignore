@@ -1,0 +1,25 @@
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# VS Code (es mantenen les extensions recomanades)
+.vscode/*
+!.vscode/extensions.json
+
+# Secrets
+secrets.h
+.env
+
+# Claude Code (configuració local)
+.claude/settings.local.json
+
+# Fitxers grans de CAD (van a Drive)
+*.stl
+*.3mf
+*.gcode
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
