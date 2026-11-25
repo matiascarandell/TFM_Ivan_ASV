@@ -26,6 +26,7 @@ Vegeu [el context inicial del TFM](docs/context-projecte.md) per a les fonts, l'
 <!-- Format: data — decisió — motiu -->
 - 2026-11-25 — Codi a Git/GitHub, fitxers grans a Drive — el repositori es manté lleuger.
 - 2026-11-25 — Partir del n3m0 i millorar-lo per iteracions — disposar d'un disseny de referència documentat per comparar-hi els canvis del TFM.
+- 2026-11-25 — Provar la primera secció de proa en PETG abans d'imprimir la resta del casc — comprovar la qualitat de les parets i l'estanquitat amb el [perfil inicial de Bambu Studio](docs/context-projecte.md#primera-impressió-de-la-proa-amb-petg).
 
 ## Hardware
 

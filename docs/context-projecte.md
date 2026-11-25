@@ -14,6 +14,28 @@ El ZIP de `Preliminar docs/NEMO/` i el directori local `files/` contenen 21 STL,
 
 Les notes locals prioritzen PETG, ABS i PLA, en aquest ordre. Holden documenta un primer casc imprès en PLA. Abans de llançar la tirada completa, convé confirmar el volum de la impressora, la variant de proa i l'ajust dels suports amb les peces reals.
 
+## Primera impressió de la proa amb PETG
+
+Per imprimir una sola secció, feu servir `hull_1_from_front_orange.stl`. La variant `hull_1-2_from_front_orange.stl` combina les dues primeres seccions. Els valors següents són una proposta per a la primera prova amb broquet de 0,4 mm, pendent de confirmar a la impressora.
+
+| Ajust a Bambu Studio | Valor inicial |
+| --- | --- |
+| Perfil de procés i orientació | `0.20 mm Standard`. Punta de proa cap amunt i cara plana d'unió contra la placa. |
+| Alçada de capa | 0,20 mm |
+| Bucles de paret | 4, aproximadament 1,7–1,8 mm on el gruix de l'STL ho permet |
+| Capes sòlides superiors i inferiors | 5 a cada costat |
+| Farciment | 10% gyroid |
+| Costura | Alineada i accessible per inspeccionar-la i segellar-la |
+| Velocitat de paret exterior | 45 mm/s |
+| Vora d'adhesió (*brim*) | Exterior, 5 mm |
+| Suports | Desactivats si la previsualització confirma que no hi ha illes a l'aire |
+
+Seleccioneu el perfil del PETG i de la placa que feu servir i mantingueu-ne les temperatures i la ventilació per a la primera prova. Feu servir filament sec. Si és Bambu PETG HF, la fitxa indica 65 °C durant 8 h en un assecador amb aire forçat. A `Preview`, reviseu per tipus de línia que els perímetres del fons i dels costats siguin continus i que la punta es tanqui sense zones flotants. Deseu el `.3mf` amb els ajustos efectivament aplicats. [Fitxa Bambu PETG HF](https://store.bblcdn.com/s6/default/20423d7f839c4a66b9712508549c68b4/Bambu_PETG_HF_TDS.pdf)
+
+1. **Prova de la peça en cru.** Submergiu la part baixa durant uns 30 minuts, amb l'obertura d'unió per sobre de l'aigua i paper absorbent sec a dins. Si apareix humitat, marqueu-ne el punt i comproveu si coincideix amb la costura o una zona prima. Anoteu el resultat amb els ajustos que hàgiu fet servir.
+2. **Prova del casc muntat.** Reserveu les cares d'unió per a l'encolat. Amb la tapa posada i els passos d'eix i timó tapats provisionalment, repetiu la prova abans de muntar l'electrònica. Holden va detectar porositat a les capes del seu casc i hi va aplicar un recobriment epoxi. [Instruccions del n3m0](https://hackaday.io/project/25508/instructions)
+3. **Imprimació i pintura.** Resoleu les fuites abans de fer l'acabat. Proveu l'adherència sobre un retall del mateix PETG, netejat i matisat segons les fitxes dels productes. Si cal un epoxi de segellat, trieu-ne un apte per al contacte amb aigua i comproveu la compatibilitat de la imprimació i la pintura amb l'epoxi curat. Per sota de la línia de flotació, feu servir un acabat que admeti immersió.
+
 ## Components i esquema preliminar
 
 L'Excel [Materiales TFM Iván Peña.xlsx](<../Preliminar docs/Materiales TFM Iván Peña.xlsx>) recull alternatives d'AliExpress i Amazon a `COMPRAS`, l'inventari a `PIEZAS 3D` i dues imatges del diagrama a `ESQUEMA`. Els subtotals que mostra són 123,31 € i 174,25 € per als blocs principals, i 44,50 € en cadascun dels blocs de components addicionals. Les llistes inclouen alternatives d'hèlix, quantitats diferents segons el proveïdor i partides sense preu. Cal contrastar les comandes i les peces rebudes abans de donar per tancada la compra.
