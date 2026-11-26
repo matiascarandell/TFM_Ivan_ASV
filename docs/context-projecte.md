@@ -14,35 +14,51 @@ El ZIP de `Preliminar docs/NEMO/` i el directori local `files/` contenen 21 STL,
 
 Les notes locals prioritzen PETG, ABS i PLA, en aquest ordre. Holden documenta un primer casc imprès en PLA. Abans de llançar la tirada completa, convé confirmar el volum de la impressora, la variant de proa i l'ajust dels suports amb les peces reals.
 
-## Primera impressió de la proa amb PETG
+## Impressió del casc amb PETG
 
-El 25 de novembre de 2026 es va llançar la primera impressió de la proa sencera, `hull_1-2_from_front_orange.stl` (seccions 1 i 2 juntes, 184 × 119 × 206 mm). L'STL ja ve orientat: la cara d'unió amb la secció 3 queda contra la placa i la punta apunta amunt. Si cal una prova més curta, `hull_1_from_front_orange.stl` només té la punta (132 × 86 × 81 mm).
+Totes les seccions del casc s'imprimeixen amb el mateix perfil, validat amb la proa. Els projectes de Bambu Studio són a la carpeta compartida de Drive, a `cad/impressio/`. No són a Git, perquè el `.gitignore` exclou els `.3mf`.
 
-**Projecte de Bambu Studio:** `cad/impressio/proa_hull_1-2_PETG_P2S.3mf`, a la carpeta compartida de Drive. No és a Git, perquè el `.gitignore` exclou els `.3mf`. Malgrat el nom, el fitxer està configurat per a la P1S.
+### Peces
+
+| Data | Peça | STL | Mida (mm) | Projecte | Previsió | Resultat |
+| --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-25 | Proa (seccions 1 i 2) | `hull_1-2_from_front_orange.stl` | 184 × 119 × 206 | `proa_hull_1-2_PETG_P2S.3mf` (malgrat el nom, configurat per a la P1S) | 9 h 09 min, 226 g | Ha sortit molt bé. Prova d'estanquitat pendent |
+| 2026-11-26 | Secció 3 | `hull_3_from_front_white.stl` | 188 × 117 × 140 | `hull_3_PETG_P1S.3mf` | 7 h 17 min, 202 g | En impressió |
+
+Totes les peces mantenen l'orientació original de l'STL, sense girar-les: una cara d'unió contra la placa i la peça cap amunt. A la proa, la punta queda a dalt. La secció 3 és una U oberta per la coberta, i els extrems lliures de les parets són els punts amb més risc que la peça s'aixequi. Si cal una prova més curta, `hull_1_from_front_orange.stl` només té la punta (132 × 86 × 81 mm).
+
+### Perfil d'impressió
 
 | Ajust | Valor aplicat | Motiu |
 | --- | --- | --- |
-| Impressora i perfil | Bambu Lab P1S, broquet de 0,4 mm, sobre `0.20mm Standard @BBL X1C` | La P1S fa servir els perfils de procés de la X1C |
+| Impressora i perfil | Bambu Lab P1S, broquet de 0,4 mm de flux estàndard, sobre `0.20mm Standard @BBL X1C` | La P1S fa servir els perfils de procés de la X1C |
 | Filament i placa | Generic PETG negre (AMS) a 255 °C, Textured PEI a 70 °C | |
-| Bucles de paret | **6, generador Arachne** | La paret de l'STL fa ~2,4 mm. Amb 4 bucles (~1,8 mm) quedaria una franja de farciment al mig per on podria filtrar l'aigua. Amb 6 bucles i Arachne, la paret és massissa |
+| Alçada de capa | 0,20 mm, també la inicial | |
+| Bucles de paret | **6, generador Arachne** | La paret de l'STL fa ~2,1–2,5 mm. Amb 4 bucles (~1,8 mm) quedaria una franja de farciment al mig per on podria filtrar l'aigua. Amb 6 bucles i Arachne, la paret és massissa |
 | Capes superiors i inferiors | 5 i 5 | |
 | Farciment | 15 % gyroid | Només afecta les zones més gruixudes |
 | Costura | Alineada | |
 | Velocitat de paret exterior i interior | 60 i 120 mm/s (el perfil base en porta 200 i 300) | Una velocitat més baixa millora l'adhesió entre capes |
 | Ventilador | 20–50 % (el perfil base en porta 40–90 %) | Amb PETG, menys ventilació vol dir més adhesió entre capes |
-| Brim | Només exterior, 8 mm | La peça és alta i recolza sobre un anell estret |
-| Suports | Cap | El 95 % de les cares que miren avall tenen menys de 45°, i amb una paret de 2,4 mm els voladissos es recolzen sols. Els suports quedarien dins la proa, on costa treure'ls, o deixarien rugosa la superfície exterior |
+| Brim | Només exterior, 8 mm | Les peces són altes i recolzen sobre un anell estret |
+| Suports | Cap | Gairebé totes les cares que miren avall tenen menys de 45°, i amb una paret de més de 2 mm els voladissos es recolzen sols. Els suports quedarien dins el casc, on costa treure'ls, o deixarien rugosa la superfície exterior |
+| Torre principal | Activada al perfil | Amb un sol filament no s'imprimeix |
 
-**Previsió:** ~9 h 07 min i ~225 g de PETG.
+### Lliçons de Bambu Studio
 
-**Lliçons de Bambu Studio:**
-- En canviar de perfil al desplegable es perden els ajustos modificats. En canviar d'impressora, cal triar **Transferir** quan surt l'avís de canvis no desats.
-- Per detectar un perfil perdut, mireu el temps estimat. Amb el perfil base, aquesta peça surt per unes 5 h 30 min i 179 g, amb només 2 parets.
-- La P2S té una detecció d'acumulacions per sondeig (*Otros → Avanzado*) que val la pena activar. La P1S no la té.
+- **Projecte nou:** per preparar una altra secció, s'ha de partir del projecte d'una peça ja validada. Si es crea un projecte de zero, es parteix del perfil base i s'han de tornar a posar tots els ajustos.
+- **Perfils perduts:** en canviar el perfil de procés al desplegable es perden els ajustos modificats. En canviar d'impressora, cal triar **Transferir** quan surt l'avís de canvis no desats. El perfil modificat es veu amb un asterisc, com `* 0.20mm Standard @BBL X1C`.
+- **Com detectar un perfil perdut:** mireu el temps estimat. Amb el perfil base, la proa surt per unes 5 h 30 min i 179 g, amb només 2 parets.
+- **Canvi de filament:** seleccionar la ranura de l'AMS només canvia el color de la previsualització. Mantingueu `* Generic PETG` amb asterisc.
+- **P2S:** té una detecció d'acumulacions per sondeig (*Otros → Avanzado*) que val la pena activar. La P1S no la té.
 
-**Pendent:** resultat de la impressió i de la prova d'estanquitat. Feu servir filament sec. Si és Bambu PETG HF, la fitxa indica 65 °C durant 8 h en un assecador amb aire forçat. [Fitxa Bambu PETG HF](https://store.bblcdn.com/s6/default/20423d7f839c4a66b9712508549c68b4/Bambu_PETG_HF_TDS.pdf)
+### Després d'imprimir
 
-Després d'imprimir, retalleu i polid el brim de la cara d'unió, perquè la junta amb la secció 3 tanqui bé. Si la prova d'estanquitat falla, canvieu els ajustos per aquest ordre: flux al 102–105 %, temperatura +5 °C, ventilador al 30 %.
+Retalleu i polid el brim de la cara d'unió, perquè la junta amb la secció següent tanqui bé. Feu servir filament sec: si és Bambu PETG HF, la fitxa indica 65 °C durant 8 h en un assecador amb aire forçat. [Fitxa Bambu PETG HF](https://store.bblcdn.com/s6/default/20423d7f839c4a66b9712508549c68b4/Bambu_PETG_HF_TDS.pdf)
+
+Si la prova d'estanquitat falla, canvieu els ajustos per aquest ordre: flux al 102–105 %, temperatura +5 °C, ventilador al 30 %.
+
+### Proves d'estanquitat
 
 1. **Prova de la peça en cru.** Submergiu la part baixa durant uns 30 minuts, amb l'obertura d'unió per sobre de l'aigua i paper absorbent sec a dins. Si apareix humitat, marqueu-ne el punt i comproveu si coincideix amb la costura o una zona prima. Anoteu el resultat amb els ajustos que hàgiu fet servir.
 2. **Prova del casc muntat.** Reserveu les cares d'unió per a l'encolat. Amb la tapa posada i els passos d'eix i timó tapats provisionalment, repetiu la prova abans de muntar l'electrònica. Holden va detectar porositat a les capes del seu casc i hi va aplicar un recobriment epoxi. [Instruccions del n3m0](https://hackaday.io/project/25508/instructions)
